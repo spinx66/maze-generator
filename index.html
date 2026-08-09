@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Generate, solve, and export random mazes."
+    >
+
+    <title>Maze Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <header class="header">
+
+            <div class="brand">
+                <h1>Maze Generator</h1>
+
+                <p>
+                    Generate, solve, and export random mazes.
+                </p>
+            </div>
+
+            <button id="generateBtn">
+                Generate
+            </button>
+
+        </header>
+
+
+        <section class="controls">
+
+            <label>
+                Width
+
+                <input
+                    id="widthInput"
+                    type="number"
+                    min="3"
+                    max="101"
+                    step="2"
+                    value="39"
+                    inputmode="numeric"
+                >
+            </label>
+
+
+            <label>
+                Height
+
+                <input
+                    id="heightInput"
+                    type="number"
+                    min="3"
+                    max="101"
+                    step="2"
+                    value="19"
+                    inputmode="numeric"
+                >
+            </label>
+
+
+            <button id="solveBtn">
+                Solve
+            </button>
+
+        </section>
+
+
+        <section
+            class="maze-container"
+            aria-label="Maze preview"
+        >
+            <canvas id="mazeCanvas"></canvas>
+        </section>
+
+
+        <section
+            class="export-controls"
+            aria-label="Export maze"
+        >
+
+            <span class="export-label">
+                Export
+            </span>
+
+            <button data-export="png">
+                PNG
+            </button>
+
+            <button data-export="svg">
+                SVG
+            </button>
+
+            <button data-export="json">
+                JSON
+            </button>
+
+            <button data-export="txt">
+                TXT
+            </button>
+
+        </section>
+
+
+		<footer>
+			<div id="status">Ready</div>
+			<div class="footer-credit">Built by Spinx · Open Source</div>
+		</footer>
+		
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
